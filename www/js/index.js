@@ -44,6 +44,9 @@ var app = {
             } else {
                 console.log('service removed', service);
             }
+
+            var eventText = document.createTextNode(JSON.stringify(result)+'\n');
+            document.getElementById("zeroconf-events").appendChild(eventText);
         });
     },
 
